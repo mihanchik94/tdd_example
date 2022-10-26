@@ -16,6 +16,7 @@ class PhoneBookTest {
         PhoneBook phoneBook = new PhoneBook();
         String name = "Boris";
         String number = "8(800) 555-35-35";
+        phoneBook.add(name, number);
         assertThat(phoneBook.findByNumber(number)).isEqualTo(name);
     }
 }

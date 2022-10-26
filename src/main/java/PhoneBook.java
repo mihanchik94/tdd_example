@@ -9,6 +9,12 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number) {
-        return null;
+        String name = "Номера нет в списке контактов";
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            if (entry.getValue().equals(number)) {
+                name = entry.getKey();
+            }
+        }
+        return name;
     }
 }
