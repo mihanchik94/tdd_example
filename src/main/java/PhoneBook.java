@@ -19,6 +19,6 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
-        return null;
+        return map.get(name) == null ? "Контакт не найден" : map.get(name);
     }
 }
